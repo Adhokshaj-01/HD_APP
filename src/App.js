@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import { LogoProvider } from "./context/LogoContext";
+import LoginWithLoading from "./components/Pages/Page_1";
+import Screen0 from "./components/Pages/Page_0";
+import SignUp from "./components/Pages/Page_2";
+import OTP from "./components/Pages/Page_3";
+import Addition from "./components/Pages/Page_4";
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <LogoProvider>
+      <Router>
+        <AnimatePresence mode="wait">
+          <Routes>
+            <Route path="/" element={<Screen0 />} />
+            <Route path="/auth" element={<LoginWithLoading />} />
+            <Route path="/register" element={<SignUp />} />
+            <Route path="/verify" element={<OTP />} />
+            <Route path="/addition" element={<Addition />} />
+
+
+
+          </Routes>
+        </AnimatePresence>
+      </Router>
+    </LogoProvider>
   );
 }
 
