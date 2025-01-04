@@ -2,16 +2,15 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
-import { useLogoContext } from "../../context/LogoContext";
 import logo from "../../assets/logo.png";
 import VerticalLinesPattern from "../../ui/Grid";
 import { IconButton } from "@mui/material";
 import { Visibility, VisibilityOff } from "@mui/icons-material"; // Import icons for show/hide password
 import { useNavigate } from "react-router-dom";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { FaArrowLeft} from "react-icons/fa";
 
 function LoginWithLoading() {
-  const { isAnimating } = useLogoContext();
+
   const [isPatternVisible, setIsPatternVisible] = useState(false);
   const [passwordVisible, setPasswordVisible] = useState(false); // State for password visibility
 

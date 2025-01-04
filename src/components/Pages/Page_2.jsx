@@ -2,13 +2,11 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
-import { useLogoContext } from "../../context/LogoContext";
 import logo from "../../assets/logo.png";
 import VerticalLinesPattern from "../../ui/Grid";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { FaArrowLeft } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 function SignUp() {
-  const { isAnimating } = useLogoContext();
   const [isPatternVisible, setIsPatternVisible] = useState(false);
   const navigate = useNavigate();
   // Trigger when the pattern is ready to show the rest of the content

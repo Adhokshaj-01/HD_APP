@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import logo from "../../assets/favicon.ico";
 import { useLogoContext } from "../../context/LogoContext";
-import { BiRightArrow } from "react-icons/bi";
 import { FaArrowRight } from "react-icons/fa";
 
 export default function Screen0() {
